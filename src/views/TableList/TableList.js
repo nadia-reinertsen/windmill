@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
@@ -43,6 +43,39 @@ const useStyles = makeStyles(styles);
 
 export default function TableList() {
   const classes = useStyles();
+  const [refresh, setRefresh] = useState();
+  const [responses, setResponses] = useState([]);
+
+
+  useEffect(() => {
+
+    //Atle hjelper
+    let myheaders = {
+      GroupId: "svg",
+      GroupKey: "ZW43OAUPlEKuqfMETg0izA==",
+    };
+
+    fetch("https://vindafor.azurewebsites.net/api/Windmills", {
+      method: "GET",
+
+      headers: myheaders,
+    })
+      .then((response) => response.json())
+      .then(data => setResponses(data));
+  }, [refresh]);
+
+  useEffect(() => {
+    setTimeout(() => setRefresh(""), 60000);
+  }, [refresh]);
+
+  const rows = [];
+ responses.map((value, index) => {
+    rows.push([value.id, value.isActivated.toString()])
+  })
+
+  console.log(rows)
+
+
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
@@ -56,15 +89,8 @@ export default function TableList() {
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Name", "Country", "City", "Salary"]}
-              tableData={[
-                ["Dakota Rice", "Niger", "Oud-Turnhout", "$36,738"],
-                ["Minerva Hooper", "Curaçao", "Sinaai-Waas", "$23,789"],
-                ["Sage Rodriguez", "Netherlands", "Baileux", "$56,142"],
-                ["Philip Chaney", "Korea, South", "Overland Park", "$38,735"],
-                ["Doris Greene", "Malawi", "Feldkirchen in Kärnten", "$63,542"],
-                ["Mason Porter", "Chile", "Gloucester", "$78,615"]
-              ]}
+              tableHead={["Windmill Id", "Status"]}
+              tableData={rows}
             />
           </CardBody>
         </Card>
