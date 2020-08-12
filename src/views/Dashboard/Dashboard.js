@@ -19,6 +19,7 @@ import Cloud from '@material-ui/icons/Cloud';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import SpeedIcon from '@material-ui/icons/Speed';
 import ExploreIcon from '@material-ui/icons/Explore';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 // core components
 import GridItem from 'components/Grid/GridItem.js';
@@ -59,7 +60,10 @@ export default function Dashboard() {
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
-                <div></div>
+                <div className={classes.stats}>
+                  <Update />
+                  Just Updated
+                </div>
               </div>
             </CardFooter>
           </Card>
@@ -78,7 +82,7 @@ export default function Dashboard() {
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
-                Last 24 Hours
+                Last Seven Days
               </div>
             </CardFooter>
           </Card>
@@ -94,8 +98,8 @@ export default function Dashboard() {
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
-                <LocalOffer />
-                Tracked from Github
+                <Update />
+                Just Updated
               </div>
             </CardFooter>
           </Card>
@@ -104,10 +108,10 @@ export default function Dashboard() {
           <Card>
             <CardHeader color="info" stats icon>
               <CardIcon color="info">
-                <Accessibility />
+                <DoubleArrowIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
-              <h3 className={classes.cardTitle}>+245</h3>
+              <p className={classes.cardCategory}>Windmills running</p>
+              <h3 className={classes.cardTitle}>14</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -131,12 +135,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>Daily Avg. Wind Speed (m/s)</h4>
               <p className={classes.cardCategory}>
                 <span className={classes.successText}>
-                  <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                  <ArrowUpward className={classes.upArrowCardCategory} /> 25%
                 </span>{' '}
-                increase in today sales.
+                increase from last week
               </p>
             </CardBody>
             <CardFooter chart>
@@ -159,12 +163,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Monthly Avg. Earnings</h4>
+              <p className={classes.cardCategory}>Average Earnings From The Last 12 Months</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <AccessTime /> updated 4 days ago
               </div>
             </CardFooter>
           </Card>
