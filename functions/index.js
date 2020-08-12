@@ -1,4 +1,6 @@
+/* eslint-disable prettier/prettier */
 const functions = require('firebase-functions');
+const fetch = require('node-fetch');
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -20,11 +22,17 @@ const db = admin.firestore();
 
 // Take the text parameter passed to this HTTP endpoint and insert it into
 // Cloud Firestore under the path /messages/:documentId/original
-exports.addMessage = functions.https.onRequest(async (req, res) => {
-  // Grab the text parameter.
-  const original = req.query.text;
-  // Push the new message into Cloud Firestore using the Firebase Admin SDK.
-  const writeResult = await admin.firestore().collection('log').add({ original: original });
-  // Send back a message that we've succesfully written the message
-  res.json({ result: `Message with ID: ${writeResult.id} added.` });
+
+exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
+  console.log('This will be run every 1 minutes!');
+  const FieldValue = admin.firestore.FieldValue;
+
+  const windspeed = fetch('https://vindafor.azurewebsites.net/api/Weather').then((result) => result.json());
+
+  const powerprice = fetch('https://vindafor.azurewebsites.net/api/PowerPrice').then((result) => result.json());
+
+  return Promise.all([windspeed, powerprice]).then((data) => {
+    const [windspeed, powerprice] = data;
+    return db.collection('log').add({ windspeed, powerprice, timestamp: FieldValue.serverTimestamp() });
+  });
 });
