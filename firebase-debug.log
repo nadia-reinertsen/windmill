@@ -1,0 +1,301 @@
+[debug] [2020-08-12T13:38:46.344Z] ----------------------------------------------------------------------
+[debug] [2020-08-12T13:38:46.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2020-08-12T13:38:46.346Z] CLI Version:   8.7.0
+[debug] [2020-08-12T13:38:46.346Z] Platform:      win32
+[debug] [2020-08-12T13:38:46.346Z] Node Version:  v12.18.2
+[debug] [2020-08-12T13:38:46.348Z] Time:          Wed Aug 12 2020 15:38:46 GMT+0200 (GMT+02:00)
+[debug] [2020-08-12T13:38:46.348Z] ----------------------------------------------------------------------
+[debug] [2020-08-12T13:38:46.348Z] 
+[debug] [2020-08-12T13:38:46.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-12T13:38:46.358Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2020-08-12T13:38:48.402Z] [hub] writing locator at C:\Users\JORGEN~1.HOL\AppData\Local\Temp\hub-vestavind-92af4.json
+[debug] [2020-08-12T13:38:50.455Z] defaultcredentials: writing to file C:\Users\jorgen.holme\AppData\Roaming\firebase\jorgenholme96_gmail_com_application_default_credentials.json
+[debug] [2020-08-12T13:38:50.456Z] Setting GAC to C:\Users\jorgen.holme\AppData\Roaming\firebase\jorgenholme96_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\jorgen.holme\\AppData\\Roaming\\firebase\\jorgenholme96_gmail_com_application_default_credentials.json"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: firestore, database, hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mfirestore, database, hosting, pubsub\u001b[22m"}}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"12\""}}
+[info] i  ui: downloading ui-v1.1.1.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.1.1.zip..."}}
+[debug] [2020-08-12T13:38:55.076Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-08-12T13:38:55.077Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2020-08-12T13:38:55.077Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\jorgen.holme\\.cache\\firebase\\emulators\\ui-v1.1.1\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\jorgen.holme\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.1.1\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2020-08-12T13:38:55.221Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\jorgen.holme\Innafor2020\windmill\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\" for Cloud Functions..."}}
+[debug] [2020-08-12T13:38:55.603Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-08-12T13:38:55.603Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2020-08-12T13:38:55.603Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-08-12T13:38:55.604Z] [worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\16680 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\16680"}}
+[debug] [2020-08-12T13:38:55.604Z] [worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: BUSY"}}
+[debug] [2020-08-12T13:38:56.177Z] [runtime-status] [16680] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\",\"node_version\":\"12.18.2\"}"}}
+[debug] [2020-08-12T13:38:56.178Z] [runtime-status] [16680] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Disabled runtime features: undefined"}}
+[debug] [2020-08-12T13:38:56.185Z] [runtime-status] [16680] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.13.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.187Z] [runtime-status] [16680] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.188Z] [runtime-status] [16680] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.190Z] [runtime-status] [16680] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-08-12T13:38:56.190Z] [runtime-status] [16680] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.244Z] [runtime-status] [16680] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-08-12T13:38:56.245Z] [runtime-status] [16680] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2020-08-12T13:38:56.245Z] [runtime-status] [16680] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.247Z] [runtime-status] [16680] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"8.13.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.248Z] [runtime-status] [16680] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.9.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-08-12T13:38:56.248Z] [runtime-status] [16680] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"8.13.0\",\"resolution\":\"C:\\\\Users\\\\jorgen.holme\\\\Innafor2020\\\\windmill\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2020-08-12T13:38:56.250Z] [runtime-status] [16680] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [16680] initializeApp(DEFAULT) {\"databaseURL\":\"https://vestavind-92af4.firebaseio.com\",\"storageBucket\":\"vestavind-92af4.appspot.com\",\"projectId\":\"vestavind-92af4\"}"}}
+[info] +  functions[addMessage]: http function initialized (http://localhost:5001/vestavind-92af4/us-central1/addMessage). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/vestavind-92af4/us-central1/addMessage)."}}
+[info] 
+┌───────────────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! View status and logs at http://localhost:4000 │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Other reserved ports: 4400, 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2020-08-12T13:38:56.259Z] [worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e91ece82-7c0d-4fb9-8f35-c2605a809c82]: IDLE"}}
+[debug] [2020-08-12T13:41:46.030Z] ----------------------------------------------------------------------
+[debug] [2020-08-12T13:41:46.033Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2020-08-12T13:41:46.033Z] CLI Version:   8.7.0
+[debug] [2020-08-12T13:41:46.033Z] Platform:      win32
+[debug] [2020-08-12T13:41:46.033Z] Node Version:  v12.18.2
+[debug] [2020-08-12T13:41:46.035Z] Time:          Wed Aug 12 2020 15:41:46 GMT+0200 (GMT+02:00)
+[debug] [2020-08-12T13:41:46.035Z] ----------------------------------------------------------------------
+[debug] [2020-08-12T13:41:46.035Z] 
+[debug] [2020-08-12T13:41:46.047Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-12T13:41:46.047Z] > authorizing via signed-in user
+[debug] [2020-08-12T13:41:46.048Z] [iam] checking project vestavind-92af4 for permissions ["firebase.projects.get"]
+[debug] [2020-08-12T13:41:46.051Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vestavind-92af4:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-08-12T13:41:46.310Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 12 Aug 2020 13:41:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=149","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-12T13:41:46.312Z] >>> HTTP REQUEST GET http://localhost:4400/emulators  
+ 
+[debug] [2020-08-12T13:41:46.316Z] <<< HTTP RESPONSE 200 {"x-powered-by":"Express","content-type":"application/json; charset=utf-8","content-length":"239","etag":"W/\"ef-T4AC+2vAIlfWm8lfiF5yMCtrSG0\"","date":"Wed, 12 Aug 2020 13:41:46 GMT","connection":"keep-alive"}
+[debug] [2020-08-12T13:41:46.316Z] Running emulators:  {"hub":{"name":"hub","host":"localhost","port":4400},"ui":{"name":"ui","host":"localhost","port":4000,"pid":17084},"logging":{"name":"logging","host":"localhost","port":4500},"functions":{"name":"functions","host":"localhost","port":5001}}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"12\""}}
+[debug] [2020-08-12T13:41:48.369Z] [functions] Watching "C:\Users\jorgen.holme\Innafor2020\windmill\functions" for Cloud Functions...
+[debug] [2020-08-12T13:41:48.380Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-08-12T13:41:48.380Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-08-12T13:41:48.380Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-08-12T13:41:48.380Z] DEBUG: [worker-~diagnostic~-de0a9988-3e57-4a27-bec8-315bbf1e5835]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\16752
+[debug] [2020-08-12T13:41:48.381Z] DEBUG: [worker-~diagnostic~-de0a9988-3e57-4a27-bec8-315bbf1e5835]: BUSY
+[debug] [2020-08-12T13:41:48.907Z] DEBUG: [runtime-status] [16752] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"}
+[debug] [2020-08-12T13:41:48.909Z] DEBUG: [runtime-status] [16752] Disabled runtime features: undefined
+[debug] [2020-08-12T13:41:48.916Z] DEBUG: [runtime-status] [16752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.919Z] DEBUG: [runtime-status] [16752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.921Z] DEBUG: [runtime-status] [16752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.925Z] DEBUG: [runtime-status] [16752] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-08-12T13:41:48.926Z] DEBUG: [runtime-status] [16752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.980Z] DEBUG: [runtime-status] [16752] Checked functions.config() {"config":{}}
+[debug] [2020-08-12T13:41:48.980Z] DEBUG: [runtime-status] [16752] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-08-12T13:41:48.981Z] DEBUG: [runtime-status] [16752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.983Z] DEBUG: [runtime-status] [16752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.983Z] DEBUG: [runtime-status] [16752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:41:48.984Z] DEBUG: [runtime-status] [16752] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-08-12T13:41:48.986Z] DEBUG: [runtime-status] [16752] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"}
+[debug] [2020-08-12T13:41:48.988Z] [functions[addMessage]] http function initialized (http://localhost:5000/vestavind-92af4/us-central1/addMessage).
+[info] i  functions: Loaded functions: addMessage 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub 
+[debug] [2020-08-12T13:41:48.997Z] DEBUG: [worker-~diagnostic~-de0a9988-3e57-4a27-bec8-315bbf1e5835]: IDLE
+[debug] [2020-08-12T13:42:12.824Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-12T13:42:12.827Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-12T13:42:12.828Z] Accepted request GET /vestavind-92af4/us-central1/addMessage --> addMessage
+[debug] [2020-08-12T13:42:12.836Z] DEBUG: [worker-pool] addWorker(addMessage)
+[debug] [2020-08-12T13:42:12.837Z] DEBUG: [worker-pool] Adding worker with key addMessage, total=1
+[debug] [2020-08-12T13:42:12.837Z] DEBUG: [worker-pool] submitWork(triggerId=addMessage)
+[debug] [2020-08-12T13:42:12.837Z] DEBUG: [worker-addMessage-ec19fe6a-46ba-4707-bd6a-9661ecb8646c]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\21264
+[debug] [2020-08-12T13:42:12.837Z] DEBUG: [worker-addMessage-ec19fe6a-46ba-4707-bd6a-9661ecb8646c]: BUSY
+[debug] [2020-08-12T13:42:13.323Z] DEBUG: [runtime-status] [21264] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"}
+[debug] [2020-08-12T13:42:13.325Z] DEBUG: [runtime-status] [21264] Disabled runtime features: undefined
+[debug] [2020-08-12T13:42:13.332Z] DEBUG: [runtime-status] [21264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.334Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.335Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.336Z] DEBUG: [runtime-status] [21264] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-08-12T13:42:13.337Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.388Z] DEBUG: [runtime-status] [21264] Checked functions.config() {"config":{}}
+[debug] [2020-08-12T13:42:13.388Z] DEBUG: [runtime-status] [21264] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-08-12T13:42:13.389Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.390Z] DEBUG: [runtime-status] [21264] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.391Z] DEBUG: [runtime-status] [21264] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:13.391Z] DEBUG: [runtime-status] [21264] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-08-12T13:42:13.393Z] DEBUG: [runtime-status] [21264] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"}
+[debug] [2020-08-12T13:42:13.394Z] DEBUG: [runtime-status] [21264] Trigger "addMessage" has been found, beginning invocation!
+[debug] [2020-08-12T13:42:13.395Z] [functions] Beginning execution of "addMessage"
+[debug] [2020-08-12T13:42:13.395Z] DEBUG: [runtime-status] [21264] triggerDefinition {"httpsTrigger":{},"name":"addMessage","entryPoint":"addMessage"}
+[debug] [2020-08-12T13:42:13.395Z] DEBUG: [runtime-status] [21264] Running addMessage in mode HTTPS
+[debug] [2020-08-12T13:42:13.399Z] DEBUG: [runtime-status] [21264] Attempting to listen to socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\21264
+[debug] [2020-08-12T13:42:13.402Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-08-12T13:42:13.408Z] DEBUG: [runtime-status] [21264] Ephemeral server handling GET request
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2020-08-12T13:42:13.857Z] DEBUG: [runtime-status] [21264] Ephemeral server survived.
+[warn] !  functions: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "original"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:268:19)
+    at Object.validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:260:13)
+    at Object.validateDocumentData (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\write-batch.js:641:18)
+    at CollectionReference.add (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\reference.js:2008:23)
+    at C:\Users\jorgen.holme\Innafor2020\windmill\functions\index.js:21:70
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:593:20
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:568:19
+    at Generator.next (<anonymous>)
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Error: Value for argument \"data\" is not a valid Firestore document. Cannot use \"undefined\" as a Firestore value (found in field \"original\"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.\n    at validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:268:19)\n    at Object.validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:260:13)\n    at Object.validateDocumentData (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\write-batch.js:641:18)\n    at CollectionReference.add (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:2008:23)\n    at C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\index.js:21:70\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:593:20\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:568:19\n    at Generator.next (<anonymous>)\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:8:71\n    at new Promise (<anonymous>)"}}
+[warn] !  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2020-08-12T13:42:13.906Z] DEBUG: [worker-addMessage-ec19fe6a-46ba-4707-bd6a-9661ecb8646c]: exited
+[debug] [2020-08-12T13:42:13.906Z] DEBUG: [worker-addMessage-ec19fe6a-46ba-4707-bd6a-9661ecb8646c]: FINISHED
+[debug] [2020-08-12T13:42:13.906Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-12T13:42:41.420Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-12T13:42:41.421Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-12T13:42:41.421Z] Accepted request GET /vestavind-92af4/us-central1/addMessage --> addMessage
+[debug] [2020-08-12T13:42:41.421Z] DEBUG: [worker-pool] Cleaned up workers for addMessage: 1 --> 0
+[debug] [2020-08-12T13:42:41.427Z] DEBUG: [worker-pool] addWorker(addMessage)
+[debug] [2020-08-12T13:42:41.427Z] DEBUG: [worker-pool] Adding worker with key addMessage, total=1
+[debug] [2020-08-12T13:42:41.427Z] DEBUG: [worker-pool] submitWork(triggerId=addMessage)
+[debug] [2020-08-12T13:42:41.427Z] DEBUG: [worker-addMessage-6adc11ca-8928-4415-a37f-d0c251574d90]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\10548
+[debug] [2020-08-12T13:42:41.428Z] DEBUG: [worker-addMessage-6adc11ca-8928-4415-a37f-d0c251574d90]: BUSY
+[debug] [2020-08-12T13:42:41.933Z] DEBUG: [runtime-status] [10548] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"}
+[debug] [2020-08-12T13:42:41.935Z] DEBUG: [runtime-status] [10548] Disabled runtime features: undefined
+[debug] [2020-08-12T13:42:41.940Z] DEBUG: [runtime-status] [10548] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:42:41.944Z] DEBUG: [runtime-status] [10548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:41.945Z] DEBUG: [runtime-status] [10548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:41.947Z] DEBUG: [runtime-status] [10548] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-08-12T13:42:41.947Z] DEBUG: [runtime-status] [10548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:41.998Z] DEBUG: [runtime-status] [10548] Checked functions.config() {"config":{}}
+[debug] [2020-08-12T13:42:41.998Z] DEBUG: [runtime-status] [10548] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-08-12T13:42:41.999Z] DEBUG: [runtime-status] [10548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:42.000Z] DEBUG: [runtime-status] [10548] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:42:42.001Z] DEBUG: [runtime-status] [10548] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:42:42.001Z] DEBUG: [runtime-status] [10548] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-08-12T13:42:42.003Z] DEBUG: [runtime-status] [10548] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"}
+[debug] [2020-08-12T13:42:42.004Z] DEBUG: [runtime-status] [10548] Trigger "addMessage" has been found, beginning invocation!
+[debug] [2020-08-12T13:42:42.005Z] [functions] Beginning execution of "addMessage"
+[debug] [2020-08-12T13:42:42.005Z] DEBUG: [runtime-status] [10548] triggerDefinition {"httpsTrigger":{},"name":"addMessage","entryPoint":"addMessage"}
+[debug] [2020-08-12T13:42:42.005Z] DEBUG: [runtime-status] [10548] Running addMessage in mode HTTPS
+[debug] [2020-08-12T13:42:42.009Z] DEBUG: [runtime-status] [10548] Attempting to listen to socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\10548
+[debug] [2020-08-12T13:42:42.011Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-08-12T13:42:42.017Z] DEBUG: [runtime-status] [10548] Ephemeral server handling GET request
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2020-08-12T13:42:42.437Z] DEBUG: [runtime-status] [10548] Ephemeral server survived.
+[warn] !  functions: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "original"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:268:19)
+    at Object.validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:260:13)
+    at Object.validateDocumentData (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\write-batch.js:641:18)
+    at CollectionReference.add (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\reference.js:2008:23)
+    at C:\Users\jorgen.holme\Innafor2020\windmill\functions\index.js:21:70
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:593:20
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:568:19
+    at Generator.next (<anonymous>)
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Error: Value for argument \"data\" is not a valid Firestore document. Cannot use \"undefined\" as a Firestore value (found in field \"original\"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.\n    at validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:268:19)\n    at Object.validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:260:13)\n    at Object.validateDocumentData (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\write-batch.js:641:18)\n    at CollectionReference.add (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:2008:23)\n    at C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\index.js:21:70\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:593:20\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:568:19\n    at Generator.next (<anonymous>)\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:8:71\n    at new Promise (<anonymous>)"}}
+[warn] !  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2020-08-12T13:42:42.482Z] DEBUG: [worker-addMessage-6adc11ca-8928-4415-a37f-d0c251574d90]: exited
+[debug] [2020-08-12T13:42:42.482Z] DEBUG: [worker-addMessage-6adc11ca-8928-4415-a37f-d0c251574d90]: FINISHED
+[debug] [2020-08-12T13:42:42.482Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-12T13:43:22.428Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-12T13:43:22.428Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-12T13:43:22.428Z] Accepted request GET /vestavind-92af4/us-central1/addMessage/?abc --> addMessage
+[debug] [2020-08-12T13:43:22.429Z] DEBUG: [worker-pool] Cleaned up workers for addMessage: 1 --> 0
+[debug] [2020-08-12T13:43:22.433Z] DEBUG: [worker-pool] addWorker(addMessage)
+[debug] [2020-08-12T13:43:22.433Z] DEBUG: [worker-pool] Adding worker with key addMessage, total=1
+[debug] [2020-08-12T13:43:22.433Z] DEBUG: [worker-pool] submitWork(triggerId=addMessage)
+[debug] [2020-08-12T13:43:22.433Z] DEBUG: [worker-addMessage-891e6e37-d435-429e-a8f4-e0e79a2e345a]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\7912
+[debug] [2020-08-12T13:43:22.433Z] DEBUG: [worker-addMessage-891e6e37-d435-429e-a8f4-e0e79a2e345a]: BUSY
+[debug] [2020-08-12T13:43:22.957Z] DEBUG: [runtime-status] [7912] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"}
+[debug] [2020-08-12T13:43:22.959Z] DEBUG: [runtime-status] [7912] Disabled runtime features: undefined
+[debug] [2020-08-12T13:43:22.966Z] DEBUG: [runtime-status] [7912] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:43:22.969Z] DEBUG: [runtime-status] [7912] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:43:22.970Z] DEBUG: [runtime-status] [7912] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:43:22.972Z] DEBUG: [runtime-status] [7912] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-08-12T13:43:22.973Z] DEBUG: [runtime-status] [7912] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:43:23.031Z] DEBUG: [runtime-status] [7912] Checked functions.config() {"config":{}}
+[debug] [2020-08-12T13:43:23.031Z] DEBUG: [runtime-status] [7912] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-08-12T13:43:23.032Z] DEBUG: [runtime-status] [7912] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:43:23.034Z] DEBUG: [runtime-status] [7912] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:43:23.035Z] DEBUG: [runtime-status] [7912] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:43:23.035Z] DEBUG: [runtime-status] [7912] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-08-12T13:43:23.038Z] DEBUG: [runtime-status] [7912] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"}
+[debug] [2020-08-12T13:43:23.040Z] DEBUG: [runtime-status] [7912] Trigger "addMessage" has been found, beginning invocation!
+[debug] [2020-08-12T13:43:23.040Z] [functions] Beginning execution of "addMessage"
+[debug] [2020-08-12T13:43:23.041Z] DEBUG: [runtime-status] [7912] triggerDefinition {"httpsTrigger":{},"name":"addMessage","entryPoint":"addMessage"}
+[debug] [2020-08-12T13:43:23.041Z] DEBUG: [runtime-status] [7912] Running addMessage in mode HTTPS
+[debug] [2020-08-12T13:43:23.046Z] DEBUG: [runtime-status] [7912] Attempting to listen to socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\7912
+[debug] [2020-08-12T13:43:23.048Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-08-12T13:43:23.057Z] DEBUG: [runtime-status] [7912] Ephemeral server handling GET request
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2020-08-12T13:43:23.484Z] DEBUG: [runtime-status] [7912] Ephemeral server survived.
+[warn] !  functions: Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field "original"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.
+    at validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:268:19)
+    at Object.validateUserInput (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\serializer.js:260:13)
+    at Object.validateDocumentData (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\write-batch.js:641:18)
+    at CollectionReference.add (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\reference.js:2008:23)
+    at C:\Users\jorgen.holme\Innafor2020\windmill\functions\index.js:21:70
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:593:20
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:568:19
+    at Generator.next (<anonymous>)
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Error: Value for argument \"data\" is not a valid Firestore document. Cannot use \"undefined\" as a Firestore value (found in field \"original\"). If you want to ignore undefined values, enable `ignoreUndefinedProperties`.\n    at validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:268:19)\n    at Object.validateUserInput (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\serializer.js:260:13)\n    at Object.validateDocumentData (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\write-batch.js:641:18)\n    at CollectionReference.add (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:2008:23)\n    at C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\index.js:21:70\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:593:20\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:568:19\n    at Generator.next (<anonymous>)\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:8:71\n    at new Promise (<anonymous>)"}}
+[warn] !  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2020-08-12T13:43:23.529Z] DEBUG: [worker-addMessage-891e6e37-d435-429e-a8f4-e0e79a2e345a]: exited
+[debug] [2020-08-12T13:43:23.529Z] DEBUG: [worker-addMessage-891e6e37-d435-429e-a8f4-e0e79a2e345a]: FINISHED
+[debug] [2020-08-12T13:43:23.529Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-08-12T13:44:26.683Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-08-12T13:44:26.683Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-08-12T13:44:26.683Z] Accepted request GET /vestavind-92af4/us-central1/addMessage/?text=abc --> addMessage
+[debug] [2020-08-12T13:44:26.683Z] DEBUG: [worker-pool] Cleaned up workers for addMessage: 1 --> 0
+[debug] [2020-08-12T13:44:26.688Z] DEBUG: [worker-pool] addWorker(addMessage)
+[debug] [2020-08-12T13:44:26.688Z] DEBUG: [worker-pool] Adding worker with key addMessage, total=1
+[debug] [2020-08-12T13:44:26.688Z] DEBUG: [worker-pool] submitWork(triggerId=addMessage)
+[debug] [2020-08-12T13:44:26.688Z] DEBUG: [worker-addMessage-965a7182-1fba-4629-8bc2-e5b1e35e3e36]: Assigning socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\11312
+[debug] [2020-08-12T13:44:26.689Z] DEBUG: [worker-addMessage-965a7182-1fba-4629-8bc2-e5b1e35e3e36]: BUSY
+[debug] [2020-08-12T13:44:27.184Z] DEBUG: [runtime-status] [11312] Functions runtime initialized. {"cwd":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions","node_version":"12.18.2"}
+[debug] [2020-08-12T13:44:27.186Z] DEBUG: [runtime-status] [11312] Disabled runtime features: undefined
+[debug] [2020-08-12T13:44:27.190Z] DEBUG: [runtime-status] [11312] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.195Z] DEBUG: [runtime-status] [11312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.196Z] DEBUG: [runtime-status] [11312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.198Z] DEBUG: [runtime-status] [11312] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-08-12T13:44:27.198Z] DEBUG: [runtime-status] [11312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.250Z] DEBUG: [runtime-status] [11312] Checked functions.config() {"config":{}}
+[debug] [2020-08-12T13:44:27.250Z] DEBUG: [runtime-status] [11312] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-08-12T13:44:27.250Z] DEBUG: [runtime-status] [11312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.252Z] DEBUG: [runtime-status] [11312] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.252Z] DEBUG: [runtime-status] [11312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.9.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-08-12T13:44:27.253Z] DEBUG: [runtime-status] [11312] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.13.0","resolution":"C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-08-12T13:44:27.254Z] DEBUG: [runtime-status] [11312] initializeApp(DEFAULT) {"databaseURL":"https://vestavind-92af4.firebaseio.com","storageBucket":"vestavind-92af4.appspot.com","projectId":"vestavind-92af4"}
+[debug] [2020-08-12T13:44:27.256Z] DEBUG: [runtime-status] [11312] Trigger "addMessage" has been found, beginning invocation!
+[debug] [2020-08-12T13:44:27.256Z] [functions] Beginning execution of "addMessage"
+[debug] [2020-08-12T13:44:27.256Z] DEBUG: [runtime-status] [11312] triggerDefinition {"httpsTrigger":{},"name":"addMessage","entryPoint":"addMessage"}
+[debug] [2020-08-12T13:44:27.257Z] DEBUG: [runtime-status] [11312] Running addMessage in mode HTTPS
+[debug] [2020-08-12T13:44:27.261Z] DEBUG: [runtime-status] [11312] Attempting to listen to socketPath: \\?\pipe\C:\Users\jorgen.holme\Innafor2020\windmill\functions\11312
+[debug] [2020-08-12T13:44:27.263Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-08-12T13:44:27.270Z] DEBUG: [runtime-status] [11312] Ephemeral server handling GET request
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[warn] !  External network resource requested!
+   - URL: "http://169.254.169.254/computeMetadata/v1/instance"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"External network resource requested!\n   - URL: \"http://169.254.169.254/computeMetadata/v1/instance\"\n - Be careful, this may be a production service."}}
+[warn] !  External network resource requested!
+   - URL: "http://metadata.google.internal./computeMetadata/v1/instance"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"External network resource requested!\n   - URL: \"http://metadata.google.internal./computeMetadata/v1/instance\"\n - Be careful, this may be a production service."}}
+[debug] [2020-08-12T13:44:27.800Z] DEBUG: [runtime-status] [11312] Ephemeral server survived.
+[warn] !  functions: Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async GoogleAuth.getClient (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17)
+    at async GrpcClient._getCredentials (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\google-gax\build\src\grpc.js:92:24)
+    at async GrpcClient.createStub (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\google-gax\build\src\grpc.js:213:23)
+Caused by: Error
+    at WriteBatch.commit (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\write-batch.js:415:23)
+    at DocumentReference.create (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\reference.js:283:14)
+    at CollectionReference.add (C:\Users\jorgen.holme\Innafor2020\windmill\functions\node_modules\@google-cloud\firestore\build\src\reference.js:2011:28)
+    at C:\Users\jorgen.holme\Innafor2020\windmill\functions\index.js:21:70
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:593:20
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:568:19
+    at Generator.next (<anonymous>)
+    at C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\jorgen.holme\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:12) {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.\n    at GoogleAuth.getApplicationDefaultAsync (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:160:19)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n    at async GoogleAuth.getClient (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:502:17)\n    at async GrpcClient._getCredentials (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:92:24)\n    at async GrpcClient.createStub (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:213:23)\nCaused by: Error\n    at WriteBatch.commit (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\write-batch.js:415:23)\n    at DocumentReference.create (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:283:14)\n    at CollectionReference.add (C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\node_modules\\@google-cloud\\firestore\\build\\src\\reference.js:2011:28)\n    at C:\\Users\\jorgen.holme\\Innafor2020\\windmill\\functions\\index.js:21:70\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:593:20\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:568:19\n    at Generator.next (<anonymous>)\n    at C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\jorgen.holme\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\emulator\\functionsEmulatorRuntime.js:4:12)"}}
+[warn] !  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addMessage"},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2020-08-12T13:44:27.845Z] DEBUG: [worker-addMessage-965a7182-1fba-4629-8bc2-e5b1e35e3e36]: exited
+[debug] [2020-08-12T13:44:27.845Z] DEBUG: [worker-addMessage-965a7182-1fba-4629-8bc2-e5b1e35e3e36]: FINISHED
+[debug] [2020-08-12T13:44:27.845Z] [work-queue] {"queueLength":0,"workRunningCount":0}
