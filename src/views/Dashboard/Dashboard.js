@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // react plugin for creating charts
 import ChartistGraph from 'react-chartist';
 // @material-ui/core
@@ -42,6 +42,32 @@ import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js'
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
+
+ //Erlend hjelper!!!
+
+  const [windSpeed,setWindSpeed] = useState();
+  const [moneyEarned,setMoneyEarned] = useState();
+  const [refresh, setRefresh] = useState();
+
+  useEffect(() => {
+    fetch('https://vindafor.azurewebsites.net/api/Weather')
+    .then(response => response.json())
+    .then(data => setWindSpeed(data));
+
+    fetch('https://vindafor.azurewebsites.net/api/PowerPrice')
+    .then(response => response.json())
+    .then(data => setMoneyEarned(data));
+
+  },[refresh]);
+
+  useEffect(() => {
+    setTimeout(() => setRefresh(''), 60000)
+}, [refresh]);
+
+ 
+  
+
+
   const classes = useStyles();
   return (
     <div>
@@ -52,13 +78,17 @@ export default function Dashboard() {
               <CardIcon color="warning">
                 <SpeedIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Wind Speed</p>
+
+              <p className={classes.cardCategory}>Wind Speed</p> 
               <h3 className={classes.cardTitle}>
-                3,4 <small>m/s</small>
+                {windSpeed} <small>m/s</small>
+
               </h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
+                <DateRange />
+                updated 1 minute ago
                 <div></div>
               </div>
             </CardFooter>
@@ -72,13 +102,13 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Money Earned</p>
               <h3 className={classes.cardTitle}>
-                200 000 <small>kr</small>
+              {moneyEarned} <small>kr</small>  
               </h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
-                Last 24 Hours
+                updated 1 minute ago
               </div>
             </CardFooter>
           </Card>
