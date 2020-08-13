@@ -39,7 +39,7 @@ import RTLPage from "views/RTLPage/RTLPage.js";
 const dashboardRoutes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "Home",
     rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
@@ -55,7 +55,7 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Windmill overview",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
     component: TableList,
@@ -63,7 +63,7 @@ const dashboardRoutes = [
   },
   {
     path: "/typography",
-    name: "Typography",
+    name: "Do not use",
     rtlName: "طباعة",
     icon: LibraryBooks,
     component: Typography,
@@ -71,7 +71,7 @@ const dashboardRoutes = [
   },
   {
     path: "/icons",
-    name: "Icons",
+    name: "Do not use",
     rtlName: "الرموز",
     icon: BubbleChart,
     component: Icons,
@@ -79,7 +79,7 @@ const dashboardRoutes = [
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "Do not use",
     rtlName: "خرائط",
     icon: LocationOn,
     component: Maps,
@@ -87,7 +87,7 @@ const dashboardRoutes = [
   },
   {
     path: "/notifications",
-    name: "Notifications",
+    name: "Do not use",
     rtlName: "إخطارات",
     icon: Notifications,
     component: NotificationsPage,
@@ -95,7 +95,7 @@ const dashboardRoutes = [
   },
   {
     path: "/rtl-page",
-    name: "RTL Support",
+    name: "Do not use",
     rtlName: "پشتیبانی از راست به چپ",
     icon: Language,
     component: RTLPage,
@@ -103,7 +103,7 @@ const dashboardRoutes = [
   },
   {
     path: "/upgrade-to-pro",
-    name: "Upgrade To PRO",
+    name: "Do not use",
     rtlName: "التطور للاحترافية",
     icon: Unarchive,
     component: UpgradeToPro,
