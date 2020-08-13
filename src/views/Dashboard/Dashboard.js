@@ -34,12 +34,16 @@ import CardIcon from 'components/Card/CardIcon.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardFooter from 'components/Card/CardFooter.js';
 
+// graphs
+import Graphs from '../Graphs/Graphs.js';
+
 import { bugs, website, server } from 'variables/general.js';
 
 import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from 'variables/charts.js';
 
 import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js';
 
+<<<<<<< HEAD
 // const admin = require('firebase-admin');
 
 // const serviceAccount = require('../../../functions/vestavind-4105a90ed990.json');
@@ -53,6 +57,8 @@ import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js'
 //import TableList from "views/TableList/TableList.js";
 
 
+=======
+>>>>>>> 08f5455259ac96c0d0e2f42df73fdb0f9b921650
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
