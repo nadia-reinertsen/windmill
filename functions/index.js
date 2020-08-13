@@ -49,3 +49,42 @@ exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((
       .add({ windspeed, powerprice, activeWindmills, timestamp: FieldValue.serverTimestamp() });
   });
 });
+
+exports.automaticWindmillSwitch = functions.pubsub.schedule('every 1 minutes').onRun((context) => {
+  console.log('This will be run every 1 minutes!');
+
+  const windspeed = fetch('https://vindafor.azurewebsites.net/api/Weather')
+    .then((result) => result.json())
+    .then((windspeed) => {
+      if (windspeed >= 3 && windspeed < 25) {
+        let myheaders = {
+          GroupId: 'svg',
+          GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
+        };
+
+        return fetch('https://vindafor.azurewebsites.net/api/Windmills', {
+          method: 'GET',
+
+          headers: myheaders,
+        })
+          .then((response) => response.json())
+          .then((windmills) => {
+            const promises = windmills.map((windmill) => {
+              if (!windmill.isActivated) {
+                return fetch(`https://vindafor.azurewebsites.net/api/Windmills/${windmill.id}/?activated=true`, {
+                  method: 'PUT',
+                  headers: myheaders,
+                });
+              } else {
+                return Promise.resolve();
+              }
+            });
+            return Promise.all(promises);
+          });
+      } else {
+        return Promise.resolve();
+      }
+    });
+
+  return windspeed;
+});

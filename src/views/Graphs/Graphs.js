@@ -142,9 +142,6 @@ const Graphs = () => {
 
 
 
-
-
-
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={4}>
