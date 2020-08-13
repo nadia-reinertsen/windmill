@@ -5,21 +5,21 @@ import ChartistGraph from 'react-chartist';
 import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 // @material-ui/icons
-import Store from "@material-ui/icons/Store";
-import Warning from "@material-ui/icons/Warning";
-import DateRange from "@material-ui/icons/DateRange";
-import LocalOffer from "@material-ui/icons/LocalOffer";
-import Update from "@material-ui/icons/Update";
-import ArrowUpward from "@material-ui/icons/ArrowUpward";
-import AccessTime from "@material-ui/icons/AccessTime";
-import Accessibility from "@material-ui/icons/Accessibility";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import SpeedIcon from "@material-ui/icons/Speed";
-import ExploreIcon from "@material-ui/icons/Explore";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import Store from '@material-ui/icons/Store';
+import Warning from '@material-ui/icons/Warning';
+import DateRange from '@material-ui/icons/DateRange';
+import LocalOffer from '@material-ui/icons/LocalOffer';
+import Update from '@material-ui/icons/Update';
+import ArrowUpward from '@material-ui/icons/ArrowUpward';
+import AccessTime from '@material-ui/icons/AccessTime';
+import Accessibility from '@material-ui/icons/Accessibility';
+import BugReport from '@material-ui/icons/BugReport';
+import Code from '@material-ui/icons/Code';
+import Cloud from '@material-ui/icons/Cloud';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import SpeedIcon from '@material-ui/icons/Speed';
+import ExploreIcon from '@material-ui/icons/Explore';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 // core components
 import GridItem from 'components/Grid/GridItem.js';
@@ -43,22 +43,6 @@ import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from 'v
 
 import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js';
 
-<<<<<<< HEAD
-// const admin = require('firebase-admin');
-
-// const serviceAccount = require('../../../functions/vestavind-4105a90ed990.json');
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-// });
-
-// const db = admin.firestore();
-
-//import TableList from "views/TableList/TableList.js";
-
-
-=======
->>>>>>> 08f5455259ac96c0d0e2f42df73fdb0f9b921650
 const useStyles = makeStyles(styles);
 
 export default function Dashboard() {
@@ -70,17 +54,17 @@ export default function Dashboard() {
   const [responses, setResponses] = useState([]);
 
   useEffect(() => {
-    fetch("https://vindafor.azurewebsites.net/api/Weather")
+    fetch('https://vindafor.azurewebsites.net/api/Weather')
       .then((response) => response.json())
       .then((data) => setWindSpeed(data));
 
-    fetch("https://vindafor.azurewebsites.net/api/PowerPrice")
+    fetch('https://vindafor.azurewebsites.net/api/PowerPrice')
       .then((response) => response.json())
       .then((data) => setMoneyEarned(data));
   }, [refresh]);
 
   useEffect(() => {
-    setTimeout(() => setRefresh(""), 60000);
+    setTimeout(() => setRefresh(''), 60000);
   }, [refresh]);
 
   let currentEarnings;
@@ -88,11 +72,9 @@ export default function Dashboard() {
   if (windSpeed < 3 || windSpeed > 25) {
     currentEarnings = 0;
   } else if (windSpeed > 12) {
-    currentEarnings =
-      -maintainanceCostConst - 76 * windSpeed + 4.8 * moneyEarned;
+    currentEarnings = -maintainanceCostConst - 76 * windSpeed + 4.8 * moneyEarned;
   } else {
-    currentEarnings =
-      -maintainanceCostConst - 76 * windSpeed + windSpeed * 0.4 * moneyEarned;
+    currentEarnings = -maintainanceCostConst - 76 * windSpeed + windSpeed * 0.4 * moneyEarned;
   }
   const classes = useStyles();
   return (
@@ -145,8 +127,7 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <ExploreIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Current earnings per hour</p>{" "}
-              //
+              <p className={classes.cardCategory}>Current earnings per hour</p> //
               <h3 className={classes.cardTitle}>
                 {currentEarnings} <small>kr</small>
               </h3>
@@ -166,7 +147,7 @@ export default function Dashboard() {
                 <DoubleArrowIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Current windmills running</p>
-  <h3 className={classes.cardTitle}>14</h3>
+              <h3 className={classes.cardTitle}>14</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -194,7 +175,7 @@ export default function Dashboard() {
               <p className={classes.cardCategory}>
                 <span className={classes.successText}>
                   <ArrowUpward className={classes.upArrowCardCategory} /> 25%
-                </span>{" "}
+                </span>{' '}
                 Updated 1 minuite ago
               </p>
             </CardBody>
@@ -219,9 +200,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardBody>
               <h4 className={classes.cardTitle}>Monthly Avg. Earnings</h4>
-              <p className={classes.cardCategory}>
-                Average Earnings From The Last 12 Months
-              </p>
+              <p className={classes.cardCategory}>Average Earnings From The Last 12 Months</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
