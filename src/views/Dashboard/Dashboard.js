@@ -53,10 +53,11 @@ export default function Dashboard() {
   const [refresh, setRefresh] = useState();
   const [responses, setResponses] = useState([]);
   const [totalErnings, setTotalEarnings] = useState([]);
-  const [weatherApi, setWeatherApi] = useState([]);
+  //const [weatherApi, setWeatherApi] = useState([]);
   const [forecastWindSpeed, setForecastWindSpeed] = useState('');
   const [forecastTemperature, setForecastTemperture] = useState('');
-
+  const [forecastAirPreasure, setForecastAirPreasure] = useState('');
+  const [forecastHumidity, setForecastHumidity] = useState('');
 
   useEffect(() => {
     fetch('https://vindafor.azurewebsites.net/api/Weather')
@@ -70,6 +71,9 @@ fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-
 .then((data) => {
   setForecastWindSpeed(data.properties.timeseries[0].data.instant.details.wind_speed);
   setForecastTemperture(data.properties.timeseries[0].data.instant.details.air_temperature);
+  setForecastAirPreasure(data.properties.timeseries[0].data.instant.details.air_pressure_at_sea_level);
+  setForecastHumidity(data.properties.timeseries[0].data.instant.details.relative_humidity);
+
 } );
 
 
@@ -160,15 +164,16 @@ function numberWithSpaces(x) {
     <div>
 
 <GridContainer>
+
 <GridItem xs={12} sm={6} md={3}>
       <Card>
         <CardHeader color="primary" stats icon>
           <CardIcon color="primary">
-            <Cloud />
-          </CardIcon>
-          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+          <SpeedIcon />         
+           </CardIcon>
+          <p className={classes.cardCategory}>Predicted air preasure 1 hour from now</p>
           <h3 className={classes.cardTitle}>
-            {forecastWindSpeed} 
+            {forecastAirPreasure} <small>hPa</small>
           </h3>
         </CardHeader>
         <CardFooter stats>
@@ -188,11 +193,65 @@ function numberWithSpaces(x) {
       <Card>
         <CardHeader color="primary" stats icon>
           <CardIcon color="primary">
+          <SpeedIcon />         
+           </CardIcon>
+          <p className={classes.cardCategory}>Predicted humidity 1 hour from now</p>
+          <h3 className={classes.cardTitle}>
+            {forecastHumidity} <small>%</small>
+          </h3>
+        </CardHeader>
+        <CardFooter stats>
+          <div className={classes.stats}>
+            <div className={classes.stats}>
+              <Update />
+              Updated 1 minute ago
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+    </GridItem>
+
+
+
+
+
+
+
+
+
+
+
+<GridItem xs={12} sm={6} md={3}>
+      <Card>
+        <CardHeader color="primary" stats icon>
+          <CardIcon color="primary">
+          <SpeedIcon />         
+           </CardIcon>
+          <p className={classes.cardCategory}>Predicted wind speed 1 hour from now</p>
+          <h3 className={classes.cardTitle}>
+            {forecastWindSpeed} <small>m/s</small>
+          </h3>
+        </CardHeader>
+        <CardFooter stats>
+          <div className={classes.stats}>
+            <div className={classes.stats}>
+              <Update />
+              Updated 1 minute ago
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+    </GridItem>
+
+    <GridItem xs={12} sm={6} md={3}>
+      <Card>
+        <CardHeader color="primary" stats icon>
+          <CardIcon color="primary">
             <Cloud />
           </CardIcon>
-          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+          <p className={classes.cardCategory}>Predicted temperature 1 hour from now</p>
           <h3 className={classes.cardTitle}>
-            {forecastTemperature} 
+            {forecastTemperature} <small>Celsius</small>
           </h3>
         </CardHeader>
         <CardFooter stats>
