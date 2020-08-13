@@ -61,54 +61,7 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin"
   },
-  {
-    path: "/typography",
-    name: "Do not use",
-    rtlName: "طباعة",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Do not use",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Do not use",
-    rtlName: "خرائط",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Do not use",
-    rtlName: "إخطارات",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin"
-  },
-  {
-    path: "/rtl-page",
-    name: "Do not use",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-    component: RTLPage,
-    layout: "/rtl"
-  },
-  {
-    path: "/upgrade-to-pro",
-    name: "Do not use",
-    rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: UpgradeToPro,
-    layout: "/admin"
-  }
+  
 ];
 
 export default dashboardRoutes;
