@@ -105,6 +105,16 @@ export default function Dashboard() {
 
   console.log(activeWindmills);
 
+  let currentEarnings;
+  const maintainanceCostConst = 283;
+  if (windSpeed < 3 || windSpeed > 25) {
+    currentEarnings = -maintainanceCostConst;
+  } else if (windSpeed > 12) {
+    currentEarnings = -maintainanceCostConst - 76 * windSpeed + 4.8 * moneyEarned;
+  } else {
+    currentEarnings = -maintainanceCostConst - 76 * windSpeed + windSpeed * 0.4 * moneyEarned;
+  }
+
   const classes = useStyles();
   return (
     <div>
@@ -137,7 +147,7 @@ export default function Dashboard() {
               <CardIcon color="success">
                 <AttachMoneyIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Money Earned</p>
+              <p className={classes.cardCategory}>Power price</p>
               <h3 className={classes.cardTitle}>
                 {moneyEarned} <small>kr</small>
               </h3>
@@ -145,7 +155,7 @@ export default function Dashboard() {
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
-                Last Seven Days
+                Updated 1 minute ago
               </div>
             </CardFooter>
           </Card>
@@ -156,13 +166,15 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <ExploreIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Wind Direction</p>
-              <h3 className={classes.cardTitle}> 75&deg;</h3>
+              <p className={classes.cardCategory}>Current earnings per hour</p>
+              <h3 className={classes.cardTitle}>
+                {currentEarnings} <small>kr</small>
+              </h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
                 <Update />
-                Just Updated
+                Updated 1 minute ago
               </div>
             </CardFooter>
           </Card>
@@ -179,7 +191,7 @@ export default function Dashboard() {
             <CardFooter stats>
               <div className={classes.stats}>
                 <Update />
-                Just Updated
+                Updated 1 minuite ago
               </div>
             </CardFooter>
           </Card>
@@ -203,7 +215,7 @@ export default function Dashboard() {
                 <span className={classes.successText}>
                   <ArrowUpward className={classes.upArrowCardCategory} /> 25%
                 </span>{' '}
-                increase from last week
+                Updated 1 minuite ago
               </p>
             </CardBody>
             <CardFooter chart>
