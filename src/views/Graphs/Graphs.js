@@ -159,17 +159,17 @@ const Graphs = () => {
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Daily power price overview</h4>
+            <h4 className={classes.cardTitle}>Daily wind speed overview <small>(m/s)</small></h4>
             <p className={classes.cardCategory}>
               <span className={classes.successText}>
-                <ArrowUpward className={classes.upArrowCardCategory} /> 25%
+                <ArrowUpward className={classes.upArrowCardCategory} />
               </span>{' '}
               Updated 1 minuite ago
             </p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> updated 4 minutes ago
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
@@ -192,7 +192,7 @@ const Graphs = () => {
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> updated 4 days ago
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
@@ -209,12 +209,12 @@ const Graphs = () => {
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Daily power price overview</h4>
-            <p className={classes.cardCategory}>Last Campaign Performance</p>
+            <h4 className={classes.cardTitle}>Daily power price overview  <small>(NOK/MWh)</small> </h4>
+            <p className={classes.cardCategory}>  Updated 1 minuite ago</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> campaign sent 2 days ago
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
