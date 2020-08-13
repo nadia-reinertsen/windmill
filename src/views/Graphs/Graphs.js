@@ -140,7 +140,31 @@ const Graphs = () => {
     series: [powerprice.reverse()],
   };
 
+  var currentEarningsList = [];
+  var maintainanceCostConst;
+  var price;
+  var wSpeed;
+  var currentEarnings;
+  for (let i = 0; i < latestWindspeeds?.length; i++) {
+    if (i % 60 === 0) {
+      price = latestWindspeeds[i].powerprice;
+      wSpeed = latestWindspeeds[i].windspeed;
+      maintainanceCostConst = 0;
+      if (wSpeed < 3 || wSpeed > 25) {
+        currentEarnings = 0;
+      } else if (wSpeed > 12) {
+        currentEarnings = -maintainanceCostConst - 76 * wSpeed + 4.8 * price;
+      } else {
+        currentEarnings = -maintainanceCostConst - 76 * wSpeed + wSpeed * 0.4 * price;
+      }
+      currentEarningsList.push(currentEarnings);
+    }
+  }
 
+  const currentEarningsData = {
+    labels: labels.reverse(),
+    series: [currentEarningsList.reverse()],
+  };
 
   return (
     <GridContainer>
@@ -161,7 +185,7 @@ const Graphs = () => {
               <span className={classes.successText}>
                 <ArrowUpward className={classes.upArrowCardCategory} />
               </span>{' '}
-              Updated 1 minuite ago
+              Updated 1 minute ago
             </p>
           </CardBody>
           <CardFooter chart>
@@ -173,23 +197,22 @@ const Graphs = () => {
       </GridItem>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="warning">
+          <CardHeader color="danger">
             <ChartistGraph
               className="ct-chart"
-              data={emailsSubscriptionChart.data}
-              type="Bar"
-              options={emailsSubscriptionChart.options}
-              responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-              listener={emailsSubscriptionChart.animation}
+              data={currentEarningsData}
+              type="Line"
+              options={completedTasksChart.options}
+              listener={completedTasksChart.animation}
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Monthly Avg. Earnings</h4>
-            <p className={classes.cardCategory}>Average Earnings From The Last 12 Months</p>
+            <h4 className={classes.cardTitle}>Earnings Last Ten Hours</h4>
+            <p className={classes.cardCategory}>Current earnings from the last ten hours</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> Latest update
+              <AccessTime /> Updated just now
             </div>
           </CardFooter>
         </Card>
