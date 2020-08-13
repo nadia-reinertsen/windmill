@@ -170,7 +170,7 @@ const Graphs = () => {
     <GridContainer>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="success">
+          <CardHeader color="info">
             <ChartistGraph
               className="ct-chart"
               data={windSpeedData}
@@ -197,7 +197,7 @@ const Graphs = () => {
       </GridItem>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="danger">
+          <CardHeader color="success">
             <ChartistGraph
               className="ct-chart"
               data={currentEarningsData}
@@ -219,7 +219,7 @@ const Graphs = () => {
       </GridItem>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="danger">
+          <CardHeader color="warning">
             <ChartistGraph
               className="ct-chart"
               data={powerpriceData}
