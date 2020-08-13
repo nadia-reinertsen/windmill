@@ -31,8 +31,21 @@ exports.scheduledFunction = functions.pubsub.schedule('every 1 minutes').onRun((
 
   const powerprice = fetch('https://vindafor.azurewebsites.net/api/PowerPrice').then((result) => result.json());
 
-  return Promise.all([windspeed, powerprice]).then((data) => {
-    const [windspeed, powerprice] = data;
-    return db.collection('log').add({ windspeed, powerprice, timestamp: FieldValue.serverTimestamp() });
+  let myheaders = {
+    GroupId: 'svg',
+    GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
+  };
+
+  const activeWindmills = fetch('https://vindafor.azurewebsites.net/api/Windmills', {
+    method: 'GET',
+
+    headers: myheaders,
+  }).then((response) => response.json());
+
+  return Promise.all([windspeed, powerprice, activeWindmills]).then((data) => {
+    const [windspeed, powerprice, activeWindmills] = data;
+    return db
+      .collection('log')
+      .add({ windspeed, powerprice, activeWindmills, timestamp: FieldValue.serverTimestamp() });
   });
 });

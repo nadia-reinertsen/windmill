@@ -35,7 +35,7 @@ import CardBody from 'components/Card/CardBody.js';
 import CardFooter from 'components/Card/CardFooter.js';
 
 // graphs
-import Graphs from '../Graphs/Graphs.js';
+// import Graphs from '../Graphs/Graphs.js';
 
 import { bugs, website, server } from 'variables/general.js';
 
@@ -66,6 +66,35 @@ export default function Dashboard() {
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
   }, [refresh]);
+
+  useEffect(() => {
+    //Atle hjelper
+    let myheaders = {
+      GroupId: 'svg',
+      GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
+    };
+
+    fetch('https://vindafor.azurewebsites.net/api/Windmills', {
+      method: 'GET',
+
+      headers: myheaders,
+    })
+      .then((response) => response.json())
+      .then((data) => setResponses(data));
+  }, [refresh]);
+
+  useEffect(() => {
+    setTimeout(() => setRefresh(''), 60000);
+  }, [refresh]);
+
+  let activated = [];
+  responses.map((value, index) => {
+    activated.push(value.isActivated ? 1 : 0);
+  });
+
+  const activeSum = activated.reduce(function (a, b) {
+    return a + b;
+  }, 0);
 
   let currentEarnings;
   const maintainanceCostConst = 0;
@@ -129,7 +158,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Current earnings per hour</p> //
               <h3 className={classes.cardTitle}>
-                {currentEarnings} <small>kr</small>
+                {Math.round(currentEarnings)} <small>kr</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -147,7 +176,7 @@ export default function Dashboard() {
                 <DoubleArrowIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Current windmills running</p>
-              <h3 className={classes.cardTitle}>14</h3>
+              <h3 className={classes.cardTitle}>{activeSum}</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
