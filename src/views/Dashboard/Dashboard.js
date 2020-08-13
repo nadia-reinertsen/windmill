@@ -166,7 +166,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Power price</p>
               <h3 className={classes.cardTitle}>
-                {moneyEarned} <small>NOK</small>
+                {moneyEarned} <small>NOK/MWh</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
