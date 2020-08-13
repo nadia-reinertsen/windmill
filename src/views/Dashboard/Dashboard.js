@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 // react plugin for creating charts
-import ChartistGraph from "react-chartist";
+import ChartistGraph from 'react-chartist';
 // @material-ui/core
-import { makeStyles } from "@material-ui/core/styles";
-import Icon from "@material-ui/core/Icon";
+import { makeStyles } from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon';
 // @material-ui/icons
 import Store from '@material-ui/icons/Store';
 import Warning from '@material-ui/icons/Warning';
@@ -22,27 +22,33 @@ import ExploreIcon from '@material-ui/icons/Explore';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 // core components
-import GridItem from "components/Grid/GridItem.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import Table from "components/Table/Table.js";
-import Tasks from "components/Tasks/Tasks.js";
-import CustomTabs from "components/CustomTabs/CustomTabs.js";
-import Danger from "components/Typography/Danger.js";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardIcon from "components/Card/CardIcon.js";
-import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
+import GridItem from 'components/Grid/GridItem.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import Table from 'components/Table/Table.js';
+import Tasks from 'components/Tasks/Tasks.js';
+import CustomTabs from 'components/CustomTabs/CustomTabs.js';
+import Danger from 'components/Typography/Danger.js';
+import Card from 'components/Card/Card.js';
+import CardHeader from 'components/Card/CardHeader.js';
+import CardIcon from 'components/Card/CardIcon.js';
+import CardBody from 'components/Card/CardBody.js';
+import CardFooter from 'components/Card/CardFooter.js';
 
-import { bugs, website, server } from "variables/general.js";
+import { bugs, website, server } from 'variables/general.js';
 
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart,
-} from "variables/charts.js";
+import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from 'variables/charts.js';
 
-import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
+import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js';
+
+// const admin = require('firebase-admin');
+
+// const serviceAccount = require('../../../functions/vestavind-4105a90ed990.json');
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+// });
+
+// const db = admin.firestore();
 
 const useStyles = makeStyles(styles);
 
@@ -52,6 +58,7 @@ export default function Dashboard() {
   const [windSpeed, setWindSpeed] = useState();
   const [moneyEarned, setMoneyEarned] = useState();
   const [refresh, setRefresh] = useState();
+  const [responses, setResponses] = useState([]);
 
   useEffect(() => {
     fetch('https://vindafor.azurewebsites.net/api/Weather')
@@ -66,6 +73,37 @@ export default function Dashboard() {
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
   }, [refresh]);
+
+  useEffect(() => {
+    //Atle hjelper
+    let myheaders = {
+      GroupId: 'svg',
+      GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
+    };
+
+    fetch('https://vindafor.azurewebsites.net/api/Windmills', {
+      method: 'GET',
+
+      headers: myheaders,
+    })
+      .then((response) => response.json())
+      .then((data) => setResponses(data));
+  }, [refresh]);
+
+  useEffect(() => {
+    setTimeout(() => setRefresh(''), 60000);
+  }, [refresh]);
+
+  const activeWindmills = [];
+  responses.map((value, index) => {
+    activeWindmills.push(value.isActivated ? 1 : 0);
+  });
+
+  const activeSum = activeWindmills.reduce(function (a, b) {
+    return a + b;
+  }, 0);
+
+  console.log(activeWindmills);
 
   const classes = useStyles();
   return (
@@ -119,7 +157,7 @@ export default function Dashboard() {
                 <ExploreIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Wind Direction</p>
-  <h3 className={classes.cardTitle}> 75&deg;</h3>
+              <h3 className={classes.cardTitle}> 75&deg;</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -136,7 +174,7 @@ export default function Dashboard() {
                 <DoubleArrowIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Windmills running</p>
-              <h3 className={classes.cardTitle}>14</h3>
+              <h3 className={classes.cardTitle}>{activeSum}</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
