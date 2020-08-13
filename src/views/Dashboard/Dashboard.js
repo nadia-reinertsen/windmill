@@ -155,9 +155,9 @@ export default function Dashboard() {
       <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <SpeedIcon />
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Cloud />
               </CardIcon>
               <p className={classes.cardCategory}>Predicted air preasure 1 hour from now</p>
               <h3 className={classes.cardTitle}>
@@ -177,9 +177,9 @@ export default function Dashboard() {
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <SpeedIcon />
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Cloud />
               </CardIcon>
               <p className={classes.cardCategory}>Predicted humidity 1 hour from now</p>
               <h3 className={classes.cardTitle}>
@@ -199,9 +199,9 @@ export default function Dashboard() {
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <SpeedIcon />
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Cloud />
               </CardIcon>
               <p className={classes.cardCategory}>Predicted percioitation 1 hour from now</p>
               <h3 className={classes.cardTitle}>
@@ -221,9 +221,9 @@ export default function Dashboard() {
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <SpeedIcon />
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <Cloud />
               </CardIcon>
               <p className={classes.cardCategory}>Predicted wind direction 1 hour from now</p>
               <h3 className={classes.cardTitle}>
@@ -241,32 +241,11 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <SpeedIcon />
-              </CardIcon>
-              <p className={classes.cardCategory}>Predicted wind speed 1 hour from now</p>
-              <h3 className={classes.cardTitle}>
-                {forecastWindSpeed} <small>m/s</small>
-              </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <div className={classes.stats}>
-                  <Update />
-                  Updated 1 minute ago
-                </div>
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
                 <Cloud />
               </CardIcon>
               <p className={classes.cardCategory}>Predicted temperature 1 hour from now</p>
@@ -285,38 +264,19 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
+
+
+
+
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="primary" stats icon>
-              <CardIcon color="primary">
-                <AttachMoneyIcon />
-              </CardIcon>
-              <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
-              <h3 className={classes.cardTitle}>
-                {numberWithSpaces(totalErnings.money)} <small>NOK</small>
-              </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <div className={classes.stats}>
-                  <Update />
-                  Updated 1 minute ago
-                </div>
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
-
-        <GridItem xs={3} sm={6} md={3}>
-          <Card>
-            <CardHeader color="danger" stats icon>
-              <CardIcon color="danger">
+            <CardHeader color="warning" stats icon>
+              <CardIcon color="warning">
                 <SpeedIcon />
               </CardIcon>
-
-              <p className={classes.cardCategory}>Total earnings from current active windmills</p>
+              <p className={classes.cardCategory}>Predicted wind speed 1 hour from now</p>
               <h3 className={classes.cardTitle}>
-                {Math.round(activeWindmillsEarning)} <small>NOK</small>
+                {forecastWindSpeed} <small>m/s</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -329,6 +289,7 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
+
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
@@ -352,6 +313,80 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
+
+
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="info" stats icon>
+              <CardIcon color="info">
+                <DoubleArrowIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Current windmills running</p>
+              <h3 className={classes.cardTitle}>
+                {activeSum}
+                <small> Active</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <Update />
+                Updated 1 minute ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+
+
+
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="success" stats icon>
+              <CardIcon color="success">
+                <AttachMoneyIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+              <h3 className={classes.cardTitle}>
+                {numberWithSpaces(totalErnings.money)} <small>NOK</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={3} sm={6} md={3}>
+          <Card>
+            <CardHeader color="success" stats icon>
+              <CardIcon color="success">
+                <AttachMoneyIcon />
+              </CardIcon>
+
+              <p className={classes.cardCategory}>Total earnings from current active windmills</p>
+              <h3 className={classes.cardTitle}>
+                {Math.round(activeWindmillsEarning)} <small>NOK</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+  
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="success" stats icon>
@@ -373,9 +408,9 @@ export default function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="rose" stats icon>
-              <CardIcon color="rose">
-                <ExploreIcon />
+            <CardHeader color="success" stats icon>
+              <CardIcon color="success">
+                <AttachMoneyIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Current earnings per windmill</p>
               <h3 className={classes.cardTitle}>
@@ -390,26 +425,7 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
-                <DoubleArrowIcon />
-              </CardIcon>
-              <p className={classes.cardCategory}>Current windmills running</p>
-              <h3 className={classes.cardTitle}>
-                {activeSum}
-                <small> Active</small>
-              </h3>
-            </CardHeader>
-            <CardFooter stats>
-              <div className={classes.stats}>
-                <Update />
-                Updated 1 minute ago
-              </div>
-            </CardFooter>
-          </Card>
-        </GridItem>
+       
       </GridContainer>
       <Graphs />
     </div>
