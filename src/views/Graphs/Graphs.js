@@ -129,6 +129,22 @@ const Graphs = () => {
     },
   };
 
+  var powerprice = [];
+  for (let i = 0; i < latestWindspeeds?.length; i++) {
+    if (i % 60 === 0) {
+      powerprice.push(latestWindspeeds[i].powerprice);
+    }
+  }
+  const powerpriceData = {
+    labels: labels.reverse(),
+    series: [powerprice.reverse()],
+  };
+
+
+
+
+
+
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={4}>
@@ -143,7 +159,7 @@ const Graphs = () => {
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Daily Avg. Wind Speed (m/s)</h4>
+            <h4 className={classes.cardTitle}>Daily power price overview</h4>
             <p className={classes.cardCategory}>
               <span className={classes.successText}>
                 <ArrowUpward className={classes.upArrowCardCategory} /> 25%
@@ -186,14 +202,14 @@ const Graphs = () => {
           <CardHeader color="danger">
             <ChartistGraph
               className="ct-chart"
-              data={completedTasksChart.data}
+              data={powerpriceData}
               type="Line"
               options={completedTasksChart.options}
               listener={completedTasksChart.animation}
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Completed Tasks</h4>
+            <h4 className={classes.cardTitle}>Daily power price overview</h4>
             <p className={classes.cardCategory}>Last Campaign Performance</p>
           </CardBody>
           <CardFooter chart>

@@ -48,31 +48,6 @@ const useStyles = makeStyles(styles);
 export default function Dashboard() {
   //Erlend hjelper!!!
 
-  const windSpeedData = {
-    labels: [
-      '10 hours ago ',
-      ' 9 hours ago ',
-      ' 8 hours ago ',
-      '7 hours ago',
-      '6 hours ago',
-      '5 hours ago',
-      '4 hours ago',
-      '3 hours ago',
-      '2 hours ago',
-      '1 hour ago',
-    ],
-    series: [[2, 17, 7, 17, 23, 18, 38]], //place array
-  };
-
-  const earningsData = {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    series: [[2, 17, 7, 17, 23, 18, 38]],
-  };
-
-  const activityData = {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    series: [[2, 17, 7, 17, 23, 18, 38]],
-  };
 
   const [windSpeed, setWindSpeed] = useState();
   const [moneyEarned, setMoneyEarned] = useState();
@@ -208,7 +183,7 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <ExploreIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Current earnings per hour</p>
+              <p className={classes.cardCategory}>Current earnings per windmill</p>
               <h3 className={classes.cardTitle}>
                 {Math.round(currentEarnings)} <small>NOK</small>
               </h3>
