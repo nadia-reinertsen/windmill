@@ -66,31 +66,23 @@ export default function Dashboard() {
       .then((response) => response.json())
       .then((data) => setWindSpeed(data));
 
-
-//weather api
-fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-2.1')
-.then((weatherApi) => weatherApi.json())
-.then((data) => {
-  setForecastWindSpeed(data.properties.timeseries[0].data.instant.details.wind_speed);
-  setForecastTemperture(data.properties.timeseries[0].data.instant.details.air_temperature);
-  setForecastAirPreasure(data.properties.timeseries[0].data.instant.details.air_pressure_at_sea_level);
-  setForecastHumidity(data.properties.timeseries[0].data.instant.details.relative_humidity);
-  setForecastPrecipitaton(data.properties.timeseries[0].data.instant.details.precipitation_amount);
-  setForecastWindDirection(data.properties.timeseries[0].data.instant.details.wind_from_direction);
-  console.log(data.properties.timeseries[0]);
-} );
-
-
-
+    //weather api
+    fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-2.1')
+      .then((weatherApi) => weatherApi.json())
+      .then((data) => {
+        setForecastWindSpeed(data.properties.timeseries[0].data.instant.details.wind_speed);
+        setForecastTemperture(data.properties.timeseries[0].data.instant.details.air_temperature);
+        setForecastAirPreasure(data.properties.timeseries[0].data.instant.details.air_pressure_at_sea_level);
+        setForecastHumidity(data.properties.timeseries[0].data.instant.details.relative_humidity);
+        setForecastPrecipitaton(data.properties.timeseries[0].data.instant.details.precipitation_amount);
+        setForecastWindDirection(data.properties.timeseries[0].data.instant.details.wind_from_direction);
+        console.log(data.properties.timeseries[0]);
+      });
 
     fetch('https://vindafor.azurewebsites.net/api/PowerPrice')
       .then((response) => response.json())
       .then((data) => setMoneyEarned(data));
   }, [refresh]);
-
-
-
-
 
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
@@ -112,8 +104,6 @@ fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-
       .then((data) => setResponses(data));
   }, [refresh]);
 
-
-
   useEffect(() => {
     //tom arve hjelper
     let myheaders = {
@@ -129,13 +119,10 @@ fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-
       .then((totalErnings) => totalErnings.json())
       .then((data) => setTotalEarnings(data));
   }, [refresh]);
-console.log(totalErnings);
-function numberWithSpaces(x) {
-  return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
-
-
-  
+  console.log(totalErnings);
+  function numberWithSpaces(x) {
+    return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  }
 
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
@@ -164,199 +151,184 @@ function numberWithSpaces(x) {
 
   const classes = useStyles();
   return (
-
     <div>
-
-<GridContainer>
-
-<GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-          <SpeedIcon />         
-           </CardIcon>
-          <p className={classes.cardCategory}>Predicted air preasure 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastAirPreasure} <small>hPa</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-
-
-    <GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-          <SpeedIcon />         
-           </CardIcon>
-          <p className={classes.cardCategory}>Predicted humidity 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastHumidity} <small>%</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-    <GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-          <SpeedIcon />         
-           </CardIcon>
-          <p className={classes.cardCategory}>Predicted percioitation 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastPrecipitation||0} <small>mm</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-
-    <GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-          <SpeedIcon />         
-           </CardIcon>
-          <p className={classes.cardCategory}>Predicted wind direction 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastWindDirection} <small>&deg;</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-
-
-
-
-
-<GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-          <SpeedIcon />         
-           </CardIcon>
-          <p className={classes.cardCategory}>Predicted wind speed 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastWindSpeed} <small>m/s</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-    <GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-            <Cloud />
-          </CardIcon>
-          <p className={classes.cardCategory}>Predicted temperature 1 hour from now</p>
-          <h3 className={classes.cardTitle}>
-            {forecastTemperature} <small>Celsius</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-
-
-
-    <GridItem xs={12} sm={6} md={3}>
-      <Card>
-        <CardHeader color="primary" stats icon>
-          <CardIcon color="primary">
-            <AttachMoneyIcon />
-          </CardIcon>
-          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
-          <h3 className={classes.cardTitle}>
-            {numberWithSpaces(totalErnings.money)} <small>NOK</small>
-          </h3>
-        </CardHeader>
-        <CardFooter stats>
-          <div className={classes.stats}>
-            <div className={classes.stats}>
-              <Update />
-              Updated 1 minute ago
-            </div>
-          </div>
-        </CardFooter>
-      </Card>
-    </GridItem>
-
-    
-      <GridItem xs={3} sm={6} md={3}>
-        <Card>
-          <CardHeader color="danger" stats icon>
-            <CardIcon color="danger">
-              <SpeedIcon />
-            </CardIcon>
-
-            <p className={classes.cardCategory}>Total earnings from current active windmills</p>
-            <h3 className={classes.cardTitle}>
-              {Math.round(activeWindmillsEarning)} <small>NOK</small>
-            </h3>
-          </CardHeader>
-          <CardFooter stats>
-            <div className={classes.stats}>
+      <GridContainer>
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <SpeedIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted air preasure 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastAirPreasure} <small>hPa</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
               <div className={classes.stats}>
-                <Update />
-                Updated 1 minute ago
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
               </div>
-            </div>
-          </CardFooter>
-        </Card>
-      </GridItem>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <SpeedIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted humidity 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastHumidity} <small>%</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <SpeedIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted percioitation 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastPrecipitation || 0} <small>mm</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <SpeedIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted wind direction 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastWindDirection} <small>&deg;</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <SpeedIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted wind speed 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastWindSpeed} <small>m/s</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <Cloud />
+              </CardIcon>
+              <p className={classes.cardCategory}>Predicted temperature 1 hour from now</p>
+              <h3 className={classes.cardTitle}>
+                {forecastTemperature} <small>C&deg;</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={6} md={3}>
+          <Card>
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
+                <AttachMoneyIcon />
+              </CardIcon>
+              <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+              <h3 className={classes.cardTitle}>
+                {numberWithSpaces(totalErnings.money)} <small>NOK</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={3} sm={6} md={3}>
+          <Card>
+            <CardHeader color="danger" stats icon>
+              <CardIcon color="danger">
+                <SpeedIcon />
+              </CardIcon>
+
+              <p className={classes.cardCategory}>Total earnings from current active windmills</p>
+              <h3 className={classes.cardTitle}>
+                {Math.round(activeWindmillsEarning)} <small>NOK</small>
+              </h3>
+            </CardHeader>
+            <CardFooter stats>
+              <div className={classes.stats}>
+                <div className={classes.stats}>
+                  <Update />
+                  Updated 1 minute ago
+                </div>
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
@@ -441,6 +413,5 @@ function numberWithSpaces(x) {
       </GridContainer>
       <Graphs />
     </div>
-    
   );
 }
