@@ -14,8 +14,8 @@ import routes from 'routes.js';
 
 import styles from 'assets/jss/material-dashboard-react/layouts/adminStyle.js';
 
-import bgImage from 'assets/img/sidebar-2.jpg';
-import logo from 'assets/img/reactlogo.png';
+import bgImage from 'assets/img/windmillbg.jfif';
+import logo from 'assets/img/wind_logo.webp';
 
 let ps;
 
