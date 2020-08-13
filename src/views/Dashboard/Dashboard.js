@@ -52,23 +52,44 @@ export default function Dashboard() {
   const [moneyEarned, setMoneyEarned] = useState();
   const [refresh, setRefresh] = useState();
   const [responses, setResponses] = useState([]);
+  const [totalErnings, setTotalEarnings] = useState([]);
+  const [weatherApi, setWeatherApi] = useState([]);
+  const [forecastWindSpeed, setForecastWindSpeed] = useState('');
+  const [forecastTemperature, setForecastTemperture] = useState('');
+
 
   useEffect(() => {
     fetch('https://vindafor.azurewebsites.net/api/Weather')
       .then((response) => response.json())
       .then((data) => setWindSpeed(data));
 
+
+//weather api
+fetch('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=57.1&lon=-2.1')
+.then((weatherApi) => weatherApi.json())
+.then((data) => {
+  setForecastWindSpeed(data.properties.timeseries[0].data.instant.details.wind_speed);
+  setForecastTemperture(data.properties.timeseries[0].data.instant.details.air_temperature);
+} );
+
+
+
+
     fetch('https://vindafor.azurewebsites.net/api/PowerPrice')
       .then((response) => response.json())
       .then((data) => setMoneyEarned(data));
   }, [refresh]);
+
+
+
+
 
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
   }, [refresh]);
 
   useEffect(() => {
-    //Atle hjelper
+    //tom arve hjelper
     let myheaders = {
       GroupId: 'svg',
       GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
@@ -82,6 +103,31 @@ export default function Dashboard() {
       .then((response) => response.json())
       .then((data) => setResponses(data));
   }, [refresh]);
+
+
+
+  useEffect(() => {
+    //tom arve hjelper
+    let myheaders = {
+      GroupId: 'svg',
+      GroupKey: 'ZW43OAUPlEKuqfMETg0izA==',
+    };
+
+    fetch('https://vindafor.azurewebsites.net/api/GroupState', {
+      method: 'GET',
+
+      headers: myheaders,
+    })
+      .then((totalErnings) => totalErnings.json())
+      .then((data) => setTotalEarnings(data));
+  }, [refresh]);
+console.log(totalErnings);
+function numberWithSpaces(x) {
+  return x?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+
+  
 
   useEffect(() => {
     setTimeout(() => setRefresh(''), 60000);
@@ -110,7 +156,82 @@ export default function Dashboard() {
 
   const classes = useStyles();
   return (
+
     <div>
+
+<GridContainer>
+<GridItem xs={12} sm={6} md={3}>
+      <Card>
+        <CardHeader color="primary" stats icon>
+          <CardIcon color="primary">
+            <Cloud />
+          </CardIcon>
+          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+          <h3 className={classes.cardTitle}>
+            {forecastWindSpeed} 
+          </h3>
+        </CardHeader>
+        <CardFooter stats>
+          <div className={classes.stats}>
+            <div className={classes.stats}>
+              <Update />
+              Updated 1 minute ago
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+    </GridItem>
+
+
+
+    <GridItem xs={12} sm={6} md={3}>
+      <Card>
+        <CardHeader color="primary" stats icon>
+          <CardIcon color="primary">
+            <Cloud />
+          </CardIcon>
+          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+          <h3 className={classes.cardTitle}>
+            {forecastTemperature} 
+          </h3>
+        </CardHeader>
+        <CardFooter stats>
+          <div className={classes.stats}>
+            <div className={classes.stats}>
+              <Update />
+              Updated 1 minute ago
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+    </GridItem>
+
+
+
+
+    <GridItem xs={12} sm={6} md={3}>
+      <Card>
+        <CardHeader color="primary" stats icon>
+          <CardIcon color="primary">
+            <AttachMoneyIcon />
+          </CardIcon>
+          <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
+          <h3 className={classes.cardTitle}>
+            {numberWithSpaces(totalErnings.money)} <small>NOK</small>
+          </h3>
+        </CardHeader>
+        <CardFooter stats>
+          <div className={classes.stats}>
+            <div className={classes.stats}>
+              <Update />
+              Updated 1 minute ago
+            </div>
+          </div>
+        </CardFooter>
+      </Card>
+    </GridItem>
+
+    
       <GridItem xs={3} sm={6} md={3}>
         <Card>
           <CardHeader color="danger" stats icon>
@@ -134,7 +255,6 @@ export default function Dashboard() {
         </Card>
       </GridItem>
 
-      <GridContainer>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
@@ -218,5 +338,6 @@ export default function Dashboard() {
       </GridContainer>
       <Graphs />
     </div>
+    
   );
 }

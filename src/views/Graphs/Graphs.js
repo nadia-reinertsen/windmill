@@ -170,7 +170,7 @@ const Graphs = () => {
     <GridContainer>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="info">
+          <CardHeader color="success">
             <ChartistGraph
               className="ct-chart"
               data={windSpeedData}
@@ -180,24 +180,24 @@ const Graphs = () => {
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Daily power price overview</h4>
+            <h4 className={classes.cardTitle}>Daily wind speed overview <small>(m/s)</small></h4>
             <p className={classes.cardCategory}>
               <span className={classes.successText}>
-                <ArrowUpward className={classes.upArrowCardCategory} /> 25%
+                <ArrowUpward className={classes.upArrowCardCategory} />
               </span>{' '}
               Updated 1 minute ago
             </p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> updated 4 minutes ago
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
       </GridItem>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="success">
+          <CardHeader color="danger">
             <ChartistGraph
               className="ct-chart"
               data={currentEarningsData}
@@ -219,7 +219,7 @@ const Graphs = () => {
       </GridItem>
       <GridItem xs={12} sm={12} md={4}>
         <Card chart>
-          <CardHeader color="warning">
+          <CardHeader color="danger">
             <ChartistGraph
               className="ct-chart"
               data={powerpriceData}
@@ -229,12 +229,12 @@ const Graphs = () => {
             />
           </CardHeader>
           <CardBody>
-            <h4 className={classes.cardTitle}>Daily power price overview</h4>
-            <p className={classes.cardCategory}>Last Campaign Performance</p>
+            <h4 className={classes.cardTitle}>Daily power price overview  <small>(NOK/MWh)</small> </h4>
+            <p className={classes.cardCategory}>  Updated 1 minuite ago</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> campaign sent 2 days ago
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
