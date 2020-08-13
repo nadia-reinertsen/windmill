@@ -34,21 +34,14 @@ import CardIcon from 'components/Card/CardIcon.js';
 import CardBody from 'components/Card/CardBody.js';
 import CardFooter from 'components/Card/CardFooter.js';
 
+// graphs
+import Graphs from '../Graphs/Graphs.js';
+
 import { bugs, website, server } from 'variables/general.js';
 
 import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from 'variables/charts.js';
 
 import styles from 'assets/jss/material-dashboard-react/views/dashboardStyle.js';
-
-// const admin = require('firebase-admin');
-
-// const serviceAccount = require('../../../functions/vestavind-4105a90ed990.json');
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-// });
-
-// const db = admin.firestore();
 
 const useStyles = makeStyles(styles);
 
