@@ -48,7 +48,6 @@ const useStyles = makeStyles(styles);
 export default function Dashboard() {
   //Erlend hjelper!!!
 
-
   const [windSpeed, setWindSpeed] = useState();
   const [moneyEarned, setMoneyEarned] = useState();
   const [refresh, setRefresh] = useState();
@@ -179,8 +178,8 @@ export default function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
+            <CardHeader color="rose" stats icon>
+              <CardIcon color="rose">
                 <ExploreIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Current earnings per windmill</p>
