@@ -203,7 +203,7 @@ export default function Dashboard() {
               <CardIcon color="info">
                 <Cloud />
               </CardIcon>
-              <p className={classes.cardCategory}>Predicted percioitation 1 hour from now</p>
+              <p className={classes.cardCategory}>Predicted precipitation 1 hour from now</p>
               <h3 className={classes.cardTitle}>
                 {forecastPrecipitation || 0} <small>mm</small>
               </h3>
@@ -298,7 +298,7 @@ export default function Dashboard() {
                 <SpeedIcon />
               </CardIcon>
 
-              <p className={classes.cardCategory}>Wind Speed</p>
+              <p className={classes.cardCategory}>Current wind Speed</p>
               <h3 className={classes.cardTitle}>
                 {windSpeed} <small>m/s</small>
               </h3>
@@ -318,8 +318,8 @@ export default function Dashboard() {
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
-            <CardHeader color="info" stats icon>
-              <CardIcon color="info">
+            <CardHeader color="primary" stats icon>
+              <CardIcon color="primary">
                 <DoubleArrowIcon />
               </CardIcon>
               <p className={classes.cardCategory}>Current windmills running</p>
@@ -349,7 +349,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
               <h3 className={classes.cardTitle}>
-                {numberWithSpaces(totalErnings.money)} <small>NOK</small>
+                {numberWithSpaces(totalErnings.money/100)} <small>NOK</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -393,7 +393,7 @@ export default function Dashboard() {
               <CardIcon color="success">
                 <AttachMoneyIcon />
               </CardIcon>
-              <p className={classes.cardCategory}>Power price</p>
+              <p className={classes.cardCategory}>Current power price</p>
               <h3 className={classes.cardTitle}>
                 {moneyEarned} <small>NOK/MWh</small>
               </h3>

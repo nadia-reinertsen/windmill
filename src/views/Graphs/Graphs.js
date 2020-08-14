@@ -209,7 +209,7 @@ const Graphs = () => {
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
-              <AccessTime /> Updated just now
+              <AccessTime /> Latest update
             </div>
           </CardFooter>
         </Card>
