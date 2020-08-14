@@ -241,7 +241,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="info" stats icon>
@@ -264,10 +263,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-
-
-
-
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="warning" stats icon>
@@ -289,7 +284,6 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-
 
         <GridItem xs={12} sm={6} md={3}>
           <Card>
@@ -314,8 +308,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-
-
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="primary" stats icon>
@@ -337,10 +329,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-
-
-
-
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="success" stats icon>
@@ -349,7 +337,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Total earnings currently accumulated from windmills</p>
               <h3 className={classes.cardTitle}>
-                {numberWithSpaces(totalErnings.money/100)} <small>NOK</small>
+                {numberWithSpaces(Math.round(totalErnings.money / 100))} <small>NOK</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -372,7 +360,7 @@ export default function Dashboard() {
 
               <p className={classes.cardCategory}>Total earnings from current active windmills</p>
               <h3 className={classes.cardTitle}>
-                {Math.round(activeWindmillsEarning)} <small>NOK</small>
+                {numberWithSpaces(Math.round(activeWindmillsEarning))} <small>NOK</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -386,7 +374,6 @@ export default function Dashboard() {
           </Card>
         </GridItem>
 
-  
         <GridItem xs={12} sm={6} md={3}>
           <Card>
             <CardHeader color="success" stats icon>
@@ -395,7 +382,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Current power price</p>
               <h3 className={classes.cardTitle}>
-                {moneyEarned} <small>NOK/MWh</small>
+                {numberWithSpaces(moneyEarned)} <small>NOK/MWh</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -414,7 +401,7 @@ export default function Dashboard() {
               </CardIcon>
               <p className={classes.cardCategory}>Current earnings per windmill</p>
               <h3 className={classes.cardTitle}>
-                {Math.round(currentEarnings)} <small>NOK</small>
+                {numberWithSpaces(Math.round(currentEarnings))} <small>NOK</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -425,7 +412,6 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-       
       </GridContainer>
       <Graphs />
     </div>

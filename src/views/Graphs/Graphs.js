@@ -181,9 +181,9 @@ const Graphs = () => {
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>
-              Daily wind speed overview <small>(m/s)</small>
+              Wind Speed Last Ten Hours <small>(m/s)</small>
             </h4>
-            <p className={classes.cardCategory}>Updated 1 minute ago</p>
+            <p className={classes.cardCategory}>Wind speed measured once per hour the last ten hours</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
@@ -205,7 +205,9 @@ const Graphs = () => {
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>Earnings Last Ten Hours</h4>
-            <p className={classes.cardCategory}>Current earnings from the last ten hours</p>
+            <p className={classes.cardCategory}>
+              Current earnings from the last ten hours <small>(NOK)</small>
+            </p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
@@ -227,9 +229,9 @@ const Graphs = () => {
           </CardHeader>
           <CardBody>
             <h4 className={classes.cardTitle}>
-              Daily power price overview <small>(NOK/MWh)</small>{' '}
+              Power Price Last Ten Hours <small>(NOK/MWh)</small>{' '}
             </h4>
-            <p className={classes.cardCategory}> Updated 1 minute ago</p>
+            <p className={classes.cardCategory}>Power price from the last ten hours</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
