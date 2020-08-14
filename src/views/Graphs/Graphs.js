@@ -183,12 +183,7 @@ const Graphs = () => {
             <h4 className={classes.cardTitle}>
               Daily wind speed overview <small>(m/s)</small>
             </h4>
-            <p className={classes.cardCategory}>
-              <span className={classes.successText}>
-                <ArrowUpward className={classes.upArrowCardCategory} />
-              </span>{' '}
-              Updated 1 minute ago
-            </p>
+            <p className={classes.cardCategory}>Updated 1 minute ago</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
@@ -234,7 +229,7 @@ const Graphs = () => {
             <h4 className={classes.cardTitle}>
               Daily power price overview <small>(NOK/MWh)</small>{' '}
             </h4>
-            <p className={classes.cardCategory}> Updated 1 minuite ago</p>
+            <p className={classes.cardCategory}> Updated 1 minute ago</p>
           </CardBody>
           <CardFooter chart>
             <div className={classes.stats}>
