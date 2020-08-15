@@ -12,11 +12,7 @@ const fetch = require('node-fetch');
 
 const admin = require('firebase-admin');
 
-const serviceAccount = require('./vestavind-4105a90ed990.json');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-});
+admin.initializeApp();
 
 const db = admin.firestore();
 
